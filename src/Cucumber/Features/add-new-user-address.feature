@@ -1,7 +1,7 @@
 Feature: Add new user address
 
   Scenario: User can add new address
-    Given There is a registered user and browser in opened on my store Log in to your account page
+    Given There is a registered user and browser is opened on my store Log in to your account page
     When The user logs in
     And User goes to the addresses page
     And User adds new address: <alias>, <address>, <city>, <postalCode>, <country>, <phone>

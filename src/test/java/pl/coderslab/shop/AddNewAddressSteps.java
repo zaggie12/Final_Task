@@ -11,17 +11,16 @@ import java.time.Duration;
 
 public class AddNewAddressSteps{
 
-    //UserInfoPage userInfoPage;
     WebDriver driver;
     MyAddressesPage myAddressesPage;
 
-    @Given("There is a registered user and browser in opened on my store Log in to your account page")
+    @Given("There is a registered user and browser is opened on my store Log in to your account page")
        public void registeredUsed() {
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
         driver.get("https://mystore-testlab.coderslab.pl/index.php?controller=authentication");
-        //System.out.println("There is a registered user");
+
     }
 
     @When("The user logs in")
@@ -48,7 +47,10 @@ public class AddNewAddressSteps{
         Assertions.assertTrue(myAddressesPage.isSuccessAlertDisplayed(), "New address should be visible");
         String successMessage = myAddressesPage.getSuccessAlert();
         Assertions.assertEquals("Address successfully added!", successMessage);
-
+    }
+    @Then("The browser is closed")
+    public void the_browser_is_closed() {
+        driver.quit();
     }
 }
 

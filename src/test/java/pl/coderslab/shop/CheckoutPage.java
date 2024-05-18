@@ -37,11 +37,6 @@ public class CheckoutPage {
     private WebElement placeOrderButton;
 
 
-    //@FindBy(xpath = "*[@id=\"conditions_to_approve[terms-and-conditions]\"]")
-    //private List<WebElement> conditionsApprovalButton;
-
-
-
 
     public CheckoutPage(WebDriver driver) {
         this.driver = driver;

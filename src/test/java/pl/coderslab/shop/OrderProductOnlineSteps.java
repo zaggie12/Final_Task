@@ -52,7 +52,6 @@ public class OrderProductOnlineSteps {
     @And("User picks {int} items of merchandise")
     public void userPicksQuantity(int arg0) {
         hummingBirdSweaterPage.selectQuantity();
-
     }
 
     @And("User adds product to Cart")
@@ -93,6 +92,5 @@ public class OrderProductOnlineSteps {
         OrderConfirmationPage orderConfirmationPage = new OrderConfirmationPage(driver);
         orderConfirmationPage.takeScreenShot();
     }
-
 
 }
